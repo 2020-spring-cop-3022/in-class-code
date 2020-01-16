@@ -1,5 +1,17 @@
 
 public class Arrays {
+	private int[] foo = {1,2,3};
+	
+	public int[] getFoo ()
+	{
+		int[] bar = new int[this.foo.length];
+		//for loop to copy
+		for (int i = 0; i < this.foo.length; ++i)
+		{
+			bar[i] = this.foo[i];
+		}
+		return bar;
+	}
 	public static void main (String[] args)
 	{
 		System.out.println("foo");

@@ -18,6 +18,7 @@ public class Main
 		// BAD EXAMPLES
 		if (false)
 			System.out.println("Nooooo");
+		int baz = 7;
 		int bar = (foo == 12) ? 12 : (baz > 5) ? 13: 7;
 		// END BAD EXAMPLES
 
