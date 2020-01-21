@@ -9,6 +9,8 @@ class CarTest {
 		//String foo = new String("bar");
 		Car jalopy = new Car();
 		Car corvette = new Car("red");
+		
+		assertEquals("red", corvette.getColor());
 	}
 
 }
