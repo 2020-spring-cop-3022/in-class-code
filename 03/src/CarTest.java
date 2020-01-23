@@ -9,8 +9,9 @@ class CarTest {
 		//String foo = new String("bar");
 		Car jalopy = new Car();
 		assertEquals("grey", jalopy.getColor());
+		assertEquals(Transmission.AUTOMATIC, jalopy.getTransmissionType());
 
-		Car corvette = new Car("red");
+		Car corvette = new Car("red", Transmission.MANUAL);
 		
 		assertEquals("red", corvette.getColor());
 		
@@ -19,6 +20,8 @@ class CarTest {
 		assertEquals(0 , corvette.getMPH());
 		corvette.accelerate(50);
 		assertEquals(50 , corvette.getMPH());
+		
+		assertEquals(Transmission.MANUAL, corvette.getTransmissionType());
 	}
 
 }
