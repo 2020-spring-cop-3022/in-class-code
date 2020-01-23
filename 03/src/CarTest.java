@@ -15,6 +15,10 @@ class CarTest {
 		assertEquals("red", corvette.getColor());
 		
 		assertEquals(2, Car.getCarCount());
+		
+		assertEquals(0 , corvette.getMPH());
+		corvette.accelerate(50);
+		assertEquals(50 , corvette.getMPH());
 	}
 
 }

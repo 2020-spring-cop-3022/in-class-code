@@ -2,6 +2,7 @@
 public class Car
 {
 	private String color;
+	private int mph = 0;
 	private static int carCount = 0;
 	
 	public Car ()
@@ -22,5 +23,15 @@ public class Car
 	public static int getCarCount ()
 	{
 		return Car.carCount;
+	}
+	
+	public int getMPH ()
+	{
+		return this.mph;
+	}
+	
+	public void accelerate (int newSpeed)
+	{
+		this.mph = newSpeed;
 	}
 }
