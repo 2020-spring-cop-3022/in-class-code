@@ -5,6 +5,7 @@ public class Frog
 	
 	public Frog ()
 	{
+		this("brown");
 	}
 
 	public Frog (String color)
