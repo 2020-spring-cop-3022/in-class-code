@@ -1,9 +1,6 @@
 
-public class Bird
+public class Bird extends Animal
 {
-	private String color;
-	private String name;
-	
 	public Bird ()
 	{
 		this("green");
@@ -18,15 +15,5 @@ public class Bird
 	{
 		this.color = color;
 		this.name = name;
-	}
-	
-	public String getColor ()
-	{
-		return this.color;
-	}
-	
-	public String getName ()
-	{
-		return this.name;
 	}
 }
