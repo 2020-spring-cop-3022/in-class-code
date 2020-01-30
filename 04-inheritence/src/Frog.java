@@ -1,9 +1,6 @@
 
-public class Frog
+public class Frog extends Animal
 {
-	private String color;
-	private String name;
-	
 	public Frog ()
 	{
 		this("brown");
@@ -14,20 +11,9 @@ public class Frog
 		this(color, "");
 	}
 	
-	public Frog (String color, String n)
+	public Frog (String color, String name)
 	{
-		this.color = color;
-		this.name = n;
+		super(color, name);
 		// a bunch of other stuff that is common to all frogs
-	}
-	
-	public String getColor ()
-	{
-		return this.color;
-	}
-	
-	public String getName ()
-	{
-		return this.name;
 	}
 }
