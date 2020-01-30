@@ -16,6 +16,9 @@ class FrogTest {
 		Frog kermit = new Frog("green", "Kermit");
 		assertEquals("green", kermit.getColor());
 		assertEquals("Kermit", kermit.getName());
+		
+		assertEquals(0, kermit.getWartCount());
+		assertEquals("go somewhere", kermit.getMoveStatement());
 	}
 
 }

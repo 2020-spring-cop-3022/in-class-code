@@ -18,4 +18,9 @@ public class Animal {
 	{
 		return this.name;
 	}
+	
+	public String getMoveStatement ()
+	{
+		return "go somewhere";
+	}
 }

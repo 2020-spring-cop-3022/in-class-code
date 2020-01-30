@@ -15,5 +15,7 @@ class BirdTest {
 		Bird bigBird = new Bird("yellow", "Big Bird");
 		assertEquals("yellow", bigBird.getColor());
 		assertEquals("Big Bird", bigBird.getName());
+		
+		assertEquals("I fly when I go somewhere", bigBird.getMoveStatement());
 	}
 }

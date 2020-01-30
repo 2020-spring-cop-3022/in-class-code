@@ -1,6 +1,8 @@
 
 public class Frog extends Animal
 {
+	private int wartCount;
+	
 	public Frog ()
 	{
 		this("brown");
@@ -15,5 +17,11 @@ public class Frog extends Animal
 	{
 		super(color, name);
 		// a bunch of other stuff that is common to all frogs
+		this.wartCount = 0;
+	}
+	
+	public int getWartCount ()
+	{
+		return this.wartCount;
 	}
 }
