@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
 
 	private String color;
 	private String name;
@@ -19,8 +19,5 @@ public class Animal {
 		return this.name;
 	}
 	
-	public String getMoveStatement ()
-	{
-		return "go somewhere";
-	}
+	abstract public String getMoveStatement ();
 }

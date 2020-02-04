@@ -19,6 +19,8 @@ public class Bird extends Animal
 	@Override
 	public String getMoveStatement ()
 	{
-		return "I fly when I "+super.getMoveStatement();
+		// no longer works since method is now abstract
+		// return "I fly when I "+super.getMoveStatement();
+		return "I fly when I go somewhere";
 	}
 }

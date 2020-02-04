@@ -24,4 +24,9 @@ public class Frog extends Animal
 	{
 		return this.wartCount;
 	}
+
+	public String getMoveStatement ()
+	{
+		return "go somewhere";
+	}
 }
