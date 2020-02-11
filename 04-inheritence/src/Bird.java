@@ -1,5 +1,5 @@
 
-public class Bird extends Animal
+final public class Bird extends Animal
 {
 	public Bird ()
 	{

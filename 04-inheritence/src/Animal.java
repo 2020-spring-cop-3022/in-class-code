@@ -2,14 +2,16 @@ public abstract class Animal {
 
 	private String color;
 	private String name;
+	public static final int NUMBER_OF_WORKDAYS = 5;
 	
 	public Animal (String color, String name)
 	{
 		this.color = color;
 		this.name = name;
+		int[] foo = new int[NUMBER_OF_WORKDAYS];
 	}
 	
-	public String getColor ()
+	final public String getColor ()
 	{
 		return this.color;
 	}
