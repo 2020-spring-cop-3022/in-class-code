@@ -7,7 +7,11 @@ class ExceptionTester {
 	@Test
 	void test() {
 		String[] names = new String[10];
+		// using lambda
+		assertThrows(NullPointerException.class,
+				() -> { int nameLength = names[0].length(); });
 		
+		// using common syntax
 		try
 		{
 			int nameLength = names[0].length();
