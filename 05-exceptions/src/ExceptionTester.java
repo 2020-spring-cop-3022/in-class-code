@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 class ExceptionTester {
 
 	@Test
-	void test() {
+	void test()
+	{
 		String[] names = new String[10];
 		// using lambda
 		assertThrows(NullPointerException.class,
@@ -16,6 +17,7 @@ class ExceptionTester {
 			// using common syntax
 			try
 			{
+				ExceptionTester.static1();
 				int nameLength = names[0].length();
 				fail("exception not throw");
 				throw new UnauthorizedUserException("foo");
@@ -29,6 +31,8 @@ class ExceptionTester {
 			catch (UnauthorizedUserException e)
 			{
 				// do something
+				System.out.println("UnauthorizedUserException caught");
+				break;
 			}
 			catch (Exception e)
 			{
@@ -41,4 +45,15 @@ class ExceptionTester {
 		}
 	}
 
+	public static void static1 () throws UnauthorizedUserException
+	{
+		ExceptionTester.static2();
+	}
+
+	public static void static2 () throws UnauthorizedUserException
+	{
+		// encountered something bad
+		// but it doesn't know what to do
+		throw new UnauthorizedUserException("foo");
+	}
 }
