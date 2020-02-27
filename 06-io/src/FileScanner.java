@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class FileScanner {
 	public static void main (String[] args)
 	{
-		try
+		try (FileInputStream fin = new FileInputStream("src/in.csv");
+			Scanner fileS = new Scanner(fin))
 		{
-			FileInputStream fin = new FileInputStream("src/in.csv");
-			Scanner fileS = new Scanner(fin);
 			fileS.useDelimiter(",");
 			String foo = fileS.next();
 			int bar = fileS.nextInt();
