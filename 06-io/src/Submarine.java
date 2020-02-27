@@ -5,7 +5,6 @@ class Submarine implements Serializable
 	private String name;
 	private int length;
 	private int crewSize;
-	private int foo;
 
 	// final private static long serialVersionUID = 123456789;
 	/*
