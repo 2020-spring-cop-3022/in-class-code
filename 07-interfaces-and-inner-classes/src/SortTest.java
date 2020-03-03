@@ -6,13 +6,22 @@ class SortTest {
 
 	@Test
 	void test() {
-		int[] unsortedList = {4, -6, 0, 10, 3, 27};
-		int[] sortedList = {-6, 0, 3, 4, 10, 27};
+		Integer[] unsortedList = {4, -6, 0, 10, 3, 27};
+		Integer[] sortedList = {-6, 0, 3, 4, 10, 27};
 		
-		// do the magic
 		Sort.sortMe(unsortedList);
 		
 		assertArrayEquals(sortedList, unsortedList);
+		
+		Double[] unsortedDoubles = {4.0, -6.0, 0.0, 10.0, 3.0, 27.0};
+		Double[] sortedDoubles = {-6.0, 0.0, 3.0, 4.0, 10.0, 27.0};
+
+		Sort.sortMe(unsortedDoubles);
+		
+		assertArrayEquals(sortedDoubles, unsortedDoubles);
+		
+		//Student[] roster = new Student[10];
+		//Sort.sortMe(roster);
 	}
 
 }
