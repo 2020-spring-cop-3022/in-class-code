@@ -20,8 +20,8 @@ class SortTest {
 		
 		assertArrayEquals(sortedDoubles, unsortedDoubles);
 		
-		//Student[] roster = new Student[10];
-		//Sort.sortMe(roster);
+		Student[] roster = new Student[10];
+		Sort.sortMe(roster);
 	}
 
 }
