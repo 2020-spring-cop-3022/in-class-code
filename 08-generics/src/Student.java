@@ -1,13 +1,15 @@
 
-public class Student <GradeType>
+public class Student <GradeType, T>
 {
 	private GradeType grade;
 	private String name;
+	private T id;
 	
-	Student (String name, GradeType grade)
+	Student (String name, GradeType grade, T id)
 	{
 		this.name = name;
 		this.grade = grade;
+		this.id = id;
 	}
 	
 	public String toString ()

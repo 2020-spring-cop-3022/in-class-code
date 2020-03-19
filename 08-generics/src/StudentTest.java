@@ -6,11 +6,11 @@ class StudentTest {
 
 	@Test
 	void test() {
-		Student<Double> s1 = new Student<Double>("Alan Turing", 99.8);
+		Student<Double, Integer> s1 = new Student<Double, Integer>("Alan Turing", 99.8, 1);
 		
 		assertEquals("Alan Turing has a 99.8", s1.toString());
 		
-		Student<Character> s2 = new Student<>("Joe Dirt", 'C');
+		Student<Character, Integer> s2 = new Student<>("Joe Dirt", 'C', 999);
 		assertEquals("Joe Dirt has a C", s2.toString());
 	}
 
