@@ -1,5 +1,5 @@
 
-public class Student <GradeType, T>
+public class Student <GradeType extends Comparable<GradeType>, T>
 {
 	private GradeType grade;
 	private String name;
