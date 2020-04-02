@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
@@ -5,6 +6,10 @@ import javax.swing.JComponent;
 
 public class VennDiagram extends JComponent
 {
+	public static final int X_OFFSET = 50;
+	public static final int Y_OFFSET = 50;
+	public static final int DIAMETER = 300;
+
 	public VennDiagram ()
 	{
 		super();
@@ -13,12 +18,15 @@ public class VennDiagram extends JComponent
 	@Override
 	public void paint (Graphics g)
 	{
-		g.fillOval(25, 25, 100, 100);
+		g.setColor(new Color(0, 155, 0, 100));
+		g.fillOval(X_OFFSET, Y_OFFSET, DIAMETER, DIAMETER);
+		g.setColor(new Color(0, 0, 255, 100));
+		g.fillOval(DIAMETER, Y_OFFSET, DIAMETER, DIAMETER);
 	}
 	
 	@Override
 	public Dimension getPreferredSize ()
 	{
-		return new Dimension(150, 150);
+		return new Dimension(2*DIAMETER + X_OFFSET, DIAMETER + 2*Y_OFFSET);
 	}
 }
