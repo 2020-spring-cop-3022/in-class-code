@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,7 +35,9 @@ public class SampleFrame extends JFrame
 		JSpinner wheel = new JSpinner(nums);
 		frame.add(wheel, BorderLayout.EAST);
 
+		frame.add(new JButton(new ImageIcon("icon.jpg")), BorderLayout.WEST);
 		// show me
+		frame.setLocation(1800,0); // display on second monitor - Dr. Bitner's setup
 		frame.pack();
 		frame.setVisible(true);
 	}
