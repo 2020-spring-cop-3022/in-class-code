@@ -32,7 +32,7 @@ public class VennDiagram extends JComponent implements ChangeListener
 	@Override
 	public Dimension getPreferredSize ()
 	{
-		return new Dimension(2*DIAMETER + X_OFFSET, DIAMETER + 2*Y_OFFSET);
+		return new Dimension(DIAMETER + this.x2 + 2*X_OFFSET, DIAMETER + 2*Y_OFFSET);
 	}
 	
 	@Override
@@ -43,5 +43,6 @@ public class VennDiagram extends JComponent implements ChangeListener
 		this.x2 = (Integer)wheel.getValue();
 		System.out.println("change occurred: "+this.x2);
 		this.repaint();
+		this.revalidate();
 	}
 }
