@@ -3,6 +3,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
+import javax.swing.JSlider;
 import javax.swing.JSpinner;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -37,7 +38,8 @@ public class VennDiagram extends JComponent implements ChangeListener
 	@Override
 	public void stateChanged (ChangeEvent e)
 	{
-		JSpinner wheel = (JSpinner)e.getSource();
+		//JSpinner wheel = (JSpinner)e.getSource();
+		JSlider wheel = (JSlider)e.getSource();
 		this.x2 = (Integer)wheel.getValue();
 		System.out.println("change occurred: "+this.x2);
 		this.repaint();
