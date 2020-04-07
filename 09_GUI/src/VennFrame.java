@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -21,7 +23,12 @@ public class VennFrame extends JFrame
 		
 		JSlider overlap = new JSlider(0, 300, 50);
 		overlap.addChangeListener(v);
-		this.add(overlap, BorderLayout.SOUTH);
+		
+		JPanel controls = new JPanel();
+		controls.add(new JLabel("A"));
+		controls.add(overlap);
+		controls.add(new JLabel("Z"));
+		this.add(controls, BorderLayout.SOUTH);
 		
 		this.setLocation(1800,0); // display on second monitor - Dr. Bitner's setup
 		this.pack();
