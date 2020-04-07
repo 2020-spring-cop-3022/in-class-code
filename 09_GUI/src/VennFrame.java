@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
 
 public class VennFrame extends JFrame
 {
@@ -8,17 +10,25 @@ public class VennFrame extends JFrame
 	{
 		super("Venn diagram");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		VennDiagram v = new VennDiagram();
+		this.add(v, BorderLayout.CENTER);
+		// layout concerns??
+		
+		SpinnerNumberModel wheel = new SpinnerNumberModel(50, 0, 300, 10);
+		JSpinner overlap = new JSpinner(wheel);
+		overlap.addChangeListener(v);
+		this.add(overlap, BorderLayout.SOUTH);
+		
+		this.setLocation(1800,0); // display on second monitor - Dr. Bitner's setup
+		this.pack();
 	}
 	public static void main (String[] args)
 	{
 		VennFrame frame = new VennFrame();
+
+		// do some other stuff
 		
-		VennDiagram v = new VennDiagram();
-		frame.add(v, BorderLayout.CENTER);
-		// layout concerns??
-		
-		frame.setLocation(1800,0); // display on second monitor - Dr. Bitner's setup
-		frame.pack();
 		frame.setVisible(true);
 	}
 }

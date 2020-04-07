@@ -3,8 +3,10 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-public class VennDiagram extends JComponent
+public class VennDiagram extends JComponent implements ChangeListener
 {
 	public static final int X_OFFSET = 50;
 	public static final int Y_OFFSET = 50;
@@ -28,5 +30,11 @@ public class VennDiagram extends JComponent
 	public Dimension getPreferredSize ()
 	{
 		return new Dimension(2*DIAMETER + X_OFFSET, DIAMETER + 2*Y_OFFSET);
+	}
+	
+	@Override
+	public void stateChanged (ChangeEvent e)
+	{
+		System.out.println("foo");
 	}
 }
