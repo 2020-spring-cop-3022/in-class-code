@@ -5,6 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
+import javax.swing.JTextArea;
 import javax.swing.SpinnerNumberModel;
 
 public class SampleFrame extends JFrame
@@ -30,6 +31,10 @@ public class SampleFrame extends JFrame
 		
 		// anonymous
 		frame.add(new JButton("Foo"), BorderLayout.NORTH);
+
+		JTextArea myTextArea = new JTextArea("Nothing yet", 3, 80);
+		myTextArea.setText("foo");
+		frame.add(myTextArea, BorderLayout.NORTH);
 		
 		SpinnerNumberModel nums = new SpinnerNumberModel(150, 0, 200, 1);
 		JSpinner wheel = new JSpinner(nums);
